@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+}
+
+h6,
+li {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+}

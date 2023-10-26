@@ -21,3 +21,23 @@ p {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
 }
+
+body {
+  min-height: 100vh;
+  background: url("assets//home/background-home-mobile.jpg") no-repeat center /
+    cover;
+}
+
+@media (min-width: 600px) {
+  body {
+    background: url("assets//home/background-home-tablet.jpg") no-repeat center /
+      cover;
+  }
+}
+
+@media (min-width: 955px) {
+  body {
+    background: url("assets//home/background-home-desktop.jpg") no-repeat center /
+      cover;
+  }
+}

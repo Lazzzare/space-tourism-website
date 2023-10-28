@@ -18,7 +18,7 @@ const Header = () => {
       {mobile && (
         <nav
           className="absolute
-       h-screen top-0 bottom-0
+       h-full top-0 bottom-0
        right-0
        backdrop-blur-[40.774227142333984px]
        md:bg-[#151823] lg:bg-transparent

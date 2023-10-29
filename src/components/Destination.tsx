@@ -3,7 +3,7 @@ import moonPng from "./../assets/destination/image-moon.png";
 import marsPng from "./../assets/destination/image-mars.png";
 import europaPng from "./../assets/destination/image-europa.png";
 import titanPng from "./../assets/destination/image-titan.png";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 const images: { [key: string]: string } = {
   Moon: moonPng,
@@ -12,15 +12,13 @@ const images: { [key: string]: string } = {
   Titan: titanPng,
 };
 
-console.log(Data.destinations);
-
 const Destination = () => {
   const [selectedDestination, setSelectedDestination] = useState("Moon");
 
   return (
     <div className="mt-[34px] md:mt-10 lg:mt-24 text-center">
       <div
-        className="text-white lg:ml-[200px] md:ml-6 text-base md:text-xl lg:text-[28px] tracking-[2.7px] 
+        className="text-white lg:ml-[200px] md:ml-6 text-base md:text-xl lg:text-[28px] tracking-[2.7px]
       md:tracking-[3.8px] lg:tracking-[4.7px] uppercase md:justify-start justify-center flex flex-row gap-7 items-center"
       >
         <h6 className="font-bold opacity-25">01</h6>
@@ -52,7 +50,7 @@ const Destination = () => {
                 <h6
                   key={index}
                   onClick={() => setSelectedDestination(destination.name)}
-                  className={`text-white uppercase text-sm md:text-base tracking-[2.3px] lg:tracking-[2.7px] cursor-pointer 
+                  className={`text-white uppercase text-sm md:text-base tracking-[2.3px] lg:tracking-[2.7px] cursor-pointer
                   hover:border-b-2 hover:border-white
               hover:pb-2 ${
                 destination.name === selectedDestination
@@ -67,8 +65,8 @@ const Destination = () => {
           </div>
           {/*  */}
           <div>
-            {Data.destinations.map((destination) => (
-              <>
+            {Data.destinations.map((destination, index) => (
+              <Fragment key={index}>
                 {destination.name === selectedDestination ? (
                   <>
                     <h1 className="text-white text-[56px] md:text-[80px] lg:text-left lg:text-[100px] uppercase">
@@ -80,7 +78,7 @@ const Destination = () => {
                     {/* Line */}
                     <div className="my-8 bg-[#383B4B] h-[1px] md:w-[573px] lg:w-[444px] md:mx-auto lg:mx-0"></div>
                     {/* Distance/TravelTime */}
-                    <div className="flex flex-col md:flex-row md:mx-auto lg:mx-0 lg:justify-start md:justify-center md:gap-24 gap-8 mb-14">
+                    <div className="flex flex-col md:flex-row md:mx-auto lg:mx-0 lg:justify-start md:justify-center md:gap-24 gap-8 pb-14">
                       <div className="flex gap-3 flex-col">
                         <h4 className="text-veryLightBlue text-sm tracking-[2.3px] uppercase">
                           AVG. DISTANCE
@@ -100,7 +98,7 @@ const Destination = () => {
                     </div>
                   </>
                 ) : null}
-              </>
+              </Fragment>
             ))}
           </div>
         </div>

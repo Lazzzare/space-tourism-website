@@ -7,7 +7,7 @@ h2,
 h3,
 h4,
 h6,
-a {
+a:not(ul a) {
   font-family: "Bellefair", serif;
   font-weight: 400;
 }
@@ -24,24 +24,40 @@ p {
 }
 
 body {
-  min-height: 100vh;
-  background: url("assets//home/background-home-mobile.jpg") no-repeat center /
+  position: relative;
+}
+
+.home {
+  background: url("assets/home/background-home-mobile.jpg") no-repeat center /
     cover;
 }
 
+.destination {
+  background: url("assets/destination/background-destination-mobile.jpg")
+    no-repeat center / cover;
+}
+
 @media (min-width: 768px) {
-  body {
-    background: url("assets//home/background-home-tablet.jpg") no-repeat center /
+  .home {
+    background: url("assets/home/background-home-tablet.jpg") no-repeat center /
       cover;
-    .active {
-      border-bottom: 3px solid #fff;
-    }
+  }
+  .destination {
+    background: url("assets/destination/background-destination-tablet.jpg")
+      no-repeat center / cover;
+  }
+  .active {
+    border-bottom: 3px solid #fff;
   }
 }
 
 @media (min-width: 1024px) {
-  body {
-    background: url("assets//home/background-home-desktop.jpg") no-repeat center /
+  .home {
+    background: url("assets/home/background-home-desktop.jpg") no-repeat center /
       cover;
+  }
+  .destination {
+    background: url("assets/destination/background-destination-desktop.jpg")
+      no-repeat center / cover;
   }
 }

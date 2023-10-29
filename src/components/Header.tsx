@@ -33,22 +33,38 @@ const Header = () => {
           />
           <ul className="text-white flex flex-col gap-8 md:flex-row px-12 md:gap-9">
             <li className="md:py-10">
-              <NavLink to="/" className="tracking-[2.7px] md:py-10">
+              <NavLink
+                to="/"
+                state="home"
+                className="tracking-[2.7px] md:py-10"
+              >
                 <span className="pr-[11px] md:hidden">00</span>HOME
               </NavLink>
             </li>
             <li className="md:py-10">
-              <NavLink to="/destination" className="tracking-[2.7px] md:py-10">
+              <NavLink
+                to="/destination"
+                state="destination"
+                className="tracking-[2.7px] md:py-10"
+              >
                 <span className="pr-[11px] md:hidden">01</span>DESTINATION
               </NavLink>
             </li>
             <li className="md:py-10">
-              <NavLink to="/crew" className="tracking-[2.7px] md:py-10">
+              <NavLink
+                to="/crew"
+                state="crew"
+                className="tracking-[2.7px] md:py-10"
+              >
                 <span className="pr-[11px] md:hidden">02</span>CREW
               </NavLink>
             </li>
             <li className="md:py-10">
-              <NavLink to="/technology" className="tracking-[2.7px] md:py-10">
+              <NavLink
+                to="/technology"
+                state="technology"
+                className="tracking-[2.7px] md:py-10"
+              >
                 <span className="pr-[11px] md:hidden">03</span>TECHNOLOGY
               </NavLink>
             </li>

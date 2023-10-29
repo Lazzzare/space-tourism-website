@@ -37,6 +37,11 @@ body {
     no-repeat center / cover;
 }
 
+.crew {
+  background: url("assets/crew/background-crew-mobile.jpg") no-repeat center /
+    cover;
+}
+
 @media (min-width: 768px) {
   .home {
     background: url("assets/home/background-home-tablet.jpg") no-repeat center /
@@ -45,6 +50,10 @@ body {
   .destination {
     background: url("assets/destination/background-destination-tablet.jpg")
       no-repeat center / cover;
+  }
+  .crew {
+    background: url("assets/crew/background-crew-tablet.jpg") no-repeat center /
+      cover;
   }
   .active {
     border-bottom: 3px solid #fff;
@@ -59,5 +68,9 @@ body {
   .destination {
     background: url("assets/destination/background-destination-desktop.jpg")
       no-repeat center / cover;
+  }
+  .crew {
+    background: url("assets/crew/background-crew-desktop.jpg") no-repeat center /
+      cover;
   }
 }

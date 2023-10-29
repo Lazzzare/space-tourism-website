@@ -12,23 +12,21 @@ const images: { [key: string]: string } = {
   Titan: titanPng,
 };
 
-console.log(Data.destinations);
-
 const Destination = () => {
   const [selectedDestination, setSelectedDestination] = useState("Moon");
 
   return (
     <div className="mt-[34px] md:mt-10 lg:mt-24 text-center">
       <div
-        className="text-white lg:ml-[200px] md:ml-6 text-base md:text-xl lg:text-[28px] tracking-[2.7px] 
+        className="text-white lg:ml-[200px] md:ml-6 text-base md:text-xl lg:text-[28px] tracking-[2.7px]
       md:tracking-[3.8px] lg:tracking-[4.7px] uppercase md:justify-start justify-center flex flex-row gap-7 items-center"
       >
         <h6 className="font-bold opacity-25">01</h6>
         <h6 className="">Pick your destination</h6>
       </div>
       {/*  */}
-      <div className="lg:w-full lg:flex lg:flex-row lg:items-center lg:mt-20 lg:mx-auto lg:justify-center">
-        <div className="mt-10 lg:w-1/2">
+      <div className="lg:w-full lg:flex lg:flex-row lg:items-center lg:mt-20 lg:justify-evenly">
+        <div className="mt-10 mb-10 lg:mb-0">
           {Data.destinations.map((destination, index) => (
             <div
               key={index}
@@ -39,7 +37,7 @@ const Destination = () => {
               <img
                 src={images[destination.name]}
                 alt={`Image of ${destination.name}`}
-                className="w-[270px] md:w-[340px] lg:min-w-[500px] mx-auto lg:mx-0"
+                className="w-[270px] md:w-[340px] lg:min-w-[445px] mx-auto lg:mx-0"
               />
             </div>
           ))}
@@ -53,11 +51,11 @@ const Destination = () => {
                   key={index}
                   onClick={() => setSelectedDestination(destination.name)}
                   className={`text-white uppercase text-sm md:text-base tracking-[2.3px] lg:tracking-[2.7px] cursor-pointer 
-                  hover:border-b-2 hover:border-white
+                  hover:border-b-2
               hover:pb-2 ${
                 destination.name === selectedDestination
-                  ? "border-b-2 border-white pb-2"
-                  : ""
+                  ? "border-b-2 border-white pb-2 hover:border-white"
+                  : "hover:border-[#808080]"
               }`}
                 >
                   {destination.name}

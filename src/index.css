@@ -25,6 +25,20 @@ p {
 
 body {
   position: relative;
+  overflow-x: hidden;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-image {
+  animation: rotate 5s linear infinite;
 }
 
 .home {

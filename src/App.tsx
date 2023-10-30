@@ -7,7 +7,6 @@ import Technology from "./components/Technology";
 
 function App() {
   const location = useLocation();
-  console.log(location);
 
   return (
     <div

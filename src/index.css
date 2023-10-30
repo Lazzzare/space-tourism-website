@@ -47,6 +47,10 @@ body {
     no-repeat center / cover;
 }
 
+.active {
+  border-right: 3px solid #fff;
+}
+
 @media (min-width: 768px) {
   .home {
     background: url("assets/home/background-home-tablet.jpg") no-repeat center /
@@ -66,6 +70,7 @@ body {
   }
   .active {
     border-bottom: 3px solid #fff;
+    border-right: 0;
   }
 }
 

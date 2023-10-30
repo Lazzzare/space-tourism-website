@@ -123,20 +123,20 @@ const Crew = () => {
                   />
                 </svg>
               </div>
-              <motion.div
-                initial={{ opacity: 0, x: 500 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1.5 }}
-              >
-                <div className="my-8 order-[-2] md:order-2 md:m-0">
+              <div className="my-8 order-[-2] md:order-2 md:m-0">
+                <motion.div
+                  initial={{ opacity: 0, x: 500 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1.5 }}
+                >
                   <img
                     src={images[crews.name.split(" ")[0]]}
                     alt="douglas"
                     className="max-w-[177.123px] inline-block md:max-w-[456.372px] lg:max-w-[568.072px]"
                   />
-                  <hr className="border-0 h-[1px] bg-[#383B4B] md:hidden" />
-                </div>
-              </motion.div>
+                </motion.div>
+                <hr className="border-0 h-[1px] bg-[#383B4B] md:hidden" />
+              </div>
             </div>
           )
       )}

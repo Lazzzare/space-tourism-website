@@ -102,7 +102,7 @@ const Destination = () => {
                       {/* Line */}
                       <div className="my-8 bg-[#383B4B] h-[1px] md:w-[573px] lg:w-[444px] md:mx-auto lg:mx-0"></div>
                       {/* Distance/TravelTime */}
-                      <div className="flex flex-col md:flex-row md:mx-auto lg:mx-0 lg:justify-start md:justify-center md:gap-24 gap-8 pb-14">
+                      <div className="flex flex-col md:flex-row md:mx-auto items-center lg:mx-0 lg:justify-start md:justify-center md:gap-24 gap-8 pb-14">
                         <div className="flex gap-3 flex-col items-start">
                           <h5 className="text-veryLightBlue text-sm tracking-[2.3px] uppercase">
                             AVG. DISTANCE

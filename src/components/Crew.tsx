@@ -13,8 +13,8 @@ const images: { [key: string]: string } = {
   Anousheh: anousheh,
 };
 
-const Crew = () => {
-  const [change, setChange] = useState<number | null>(0);
+const Crew = ({ width }: { width: boolean }) => {
+  const [change, setChange] = useState<number>(0);
 
   const handleChange = (e: React.MouseEvent<SVGElement, MouseEvent>) => {
     if (e.target instanceof SVGElement) {
@@ -84,43 +84,22 @@ const Crew = () => {
                   onClick={(e) => handleChange(e)}
                   className="mx-auto mb-8 order-[-1] md:order-1 md:my-10 lg:m-0 lg:mt-[120px] cursor-pointer"
                   xmlns="http://www.w3.org/2000/svg"
-                  width="88"
-                  height="10"
-                  viewBox="0 0 88 10"
+                  width={width ? 132 : 88}
+                  height={width ? 15 : 10}
+                  viewBox={width ? "0 0 132 15" : "0 0 88 10"}
                   fill="none"
                 >
-                  <circle
-                    opacity={`${change !== 0 && "0.174363"}`}
-                    cx="5"
-                    cy="5"
-                    r="5"
-                    fill="white"
-                    data-state="0"
-                  />
-                  <circle
-                    opacity={`${change !== 1 && "0.174363"}`}
-                    cx="31"
-                    cy="5"
-                    r="5"
-                    fill="white"
-                    data-state="1"
-                  />
-                  <circle
-                    opacity={`${change !== 2 && "0.174363"}`}
-                    cx="57"
-                    cy="5"
-                    r="5"
-                    fill="white"
-                    data-state="2"
-                  />
-                  <circle
-                    opacity={`${change !== 3 && "0.174363"}`}
-                    cx="83"
-                    cy="5"
-                    r="5"
-                    fill="white"
-                    data-state="3"
-                  />
+                  {[0, 1, 2, 3].map((index) => (
+                    <circle
+                      key={index}
+                      opacity={change !== index ? 0.174363 : 1}
+                      cx={width ? 7.5 + index * 39 : 5 + index * 26}
+                      cy={width ? 7.5 : 5}
+                      r={width ? 7.5 : 5}
+                      fill="white"
+                      data-state={index}
+                    />
+                  ))}
                 </svg>
               </div>
               <div className="my-8 order-[-2] md:order-2 md:m-0">
@@ -131,7 +110,7 @@ const Crew = () => {
                 >
                   <img
                     src={images[crews.name.split(" ")[0]]}
-                    alt="douglas"
+                    alt={crews.name}
                     className="max-w-[177.123px] inline-block md:max-w-[456.372px] lg:max-w-[568.072px]"
                   />
                 </motion.div>

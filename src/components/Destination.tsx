@@ -36,12 +36,12 @@ const Destination = () => {
         <div className="mt-10 lg:w-1/2">
           {Data.destinations.map((destination, index) => (
             <motion.div
+              key={index}
               initial={{ opacity: 0, x: -500 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5 }}
             >
               <div
-                key={index}
                 className={`m-4 ${
                   selectedDestination === destination.name ? "" : "hidden"
                 }`}

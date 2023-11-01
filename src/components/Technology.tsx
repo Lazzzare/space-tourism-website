@@ -55,14 +55,19 @@ const Technology = () => {
           } mt-8 flex flex-col lg:flex-row-reverse w-full justify-between`}
         >
           {/* Image */}
-          <div className="lg:hidden">
+          <motion.div
+            initial={{ opacity: 0, x: 500 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5 }}
+            className="lg:hidden"
+          >
             <img
               src={images[item.name]}
               alt={`Image of ${item.name}`}
               className="w-full p-0 m-0"
               style={{ padding: 0, margin: 0 }}
             />
-          </div>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 500 }}
             animate={{ opacity: 1, x: 0 }}

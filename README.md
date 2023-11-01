@@ -5,6 +5,7 @@ Welcome to the Space Tourism Website, a collaborative project by beka and lazare
 ## Overview
 
 This project showcases our combined efforts in developing a web application dedicated to space tourism. It offers an immersive journey into the world of space exploration, providing information about destinations, the crew, and the cutting-edge technology involved in space travel.
+
 ![space tourism site gif](space-tourism.gif)
 
 ## Project Features

@@ -17,7 +17,7 @@ const Destination = () => {
   const [selectedDestination, setSelectedDestination] = useState("Moon");
 
   return (
-    <div className="mt-[34px] md:mt-10 lg:mt-24 text-center">
+    <div className="mt-[34px] md:mt-10 text-center">
       <motion.div
         initial={{ opacity: 0, x: -500 }}
         animate={{ opacity: 1, x: 0 }}
@@ -42,7 +42,7 @@ const Destination = () => {
               transition={{ duration: 1.5 }}
             >
               <div
-                className={`m-4 ${
+                className={`m-4 lg:m-0 ${
                   selectedDestination === destination.name ? "" : "hidden"
                 }`}
               >
@@ -102,7 +102,7 @@ const Destination = () => {
                       {/* Line */}
                       <div className="my-8 bg-[#383B4B] h-[1px] md:w-[573px] lg:w-[444px] md:mx-auto lg:mx-0"></div>
                       {/* Distance/TravelTime */}
-                      <div className="flex flex-col md:flex-row md:mx-auto items-center lg:mx-0 lg:justify-start md:justify-center md:gap-24 gap-8 pb-14">
+                      <div className="flex flex-col md:flex-row md:mx-auto items-center lg:mx-0 lg:justify-start md:justify-center md:gap-24 gap-8 pb-14 lg:pb-0">
                         <div className="flex gap-3 flex-col items-start">
                           <h5 className="text-veryLightBlue text-sm tracking-[2.3px] uppercase">
                             AVG. DISTANCE

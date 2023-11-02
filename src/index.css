@@ -38,7 +38,7 @@ body {
 }
 
 .rotating-image {
-  animation: rotate 5s linear infinite;
+  animation: rotate 9s linear infinite;
 }
 
 .home {

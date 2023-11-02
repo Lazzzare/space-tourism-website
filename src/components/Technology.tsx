@@ -32,7 +32,7 @@ const Technology = () => {
   };
 
   return (
-    <div className="mt-[34px] mb-6 lg:ml-[166px] lg:mt-[100px]">
+    <div className="mt-[34px] pb-6 lg:ml-[166px] lg:mt-[100px]">
       <motion.div
         initial={{ opacity: 0, x: -500 }}
         animate={{ opacity: 1, x: 0 }}

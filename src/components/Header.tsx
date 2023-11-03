@@ -4,9 +4,16 @@ import close from "../assets/shared/icon-close.svg";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import navItems from "./navItems";
 
 const Header = ({ width }: { width: boolean }) => {
   const [mobile, setMobile] = useState(false);
+
+  const handleHide = (e: any) => {
+    if (e.target.tagName === "A") {
+      setMobile(false);
+    }
+  };
 
   return (
     <header className="flex justify-between items-center">
@@ -47,43 +54,24 @@ const Header = ({ width }: { width: boolean }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5 }}
           >
-            <ul className="text-white flex flex-col gap-8 md:flex-row md:gap-9 pt-32 md:pt-0">
-              <li className="pl-8 md:pl-0">
-                <NavLink
-                  to="/"
-                  state="home"
-                  className="tracking-[2.7px] md:pr-0 md:py-10 w-full block"
-                >
-                  <span className="pr-[11px] md:hidden">00</span>HOME
-                </NavLink>
-              </li>
-              <li className="pl-8 md:pl-0">
-                <NavLink
-                  to="/destination"
-                  state="destination"
-                  className="tracking-[2.7px] pr-[95px] w-full block md:pr-0 md:py-10"
-                >
-                  <span className="pr-[11px] md:hidden">01</span>DESTINATION
-                </NavLink>
-              </li>
-              <li className="pl-8 md:pl-0">
-                <NavLink
-                  to="/crew"
-                  state="crew"
-                  className="tracking-[2.7px] w-full block md:pr-0 md:py-10"
-                >
-                  <span className="pr-[11px] md:hidden">02</span>CREW
-                </NavLink>
-              </li>
-              <li className="pl-8 md:pl-0">
-                <NavLink
-                  to="/technology"
-                  state="technology"
-                  className="tracking-[2.7px] w-full block md:pr-0 md:py-10"
-                >
-                  <span className="pr-[11px] md:hidden">03</span>TECHNOLOGY
-                </NavLink>
-              </li>
+            <ul
+              className="text-white flex flex-col gap-8 md:flex-row md:gap-9 pt-32 md:pt-0"
+              onClick={(e) => handleHide(e)}
+            >
+              {navItems.map((item, index) => (
+                <li key={index} className="pl-8 md:pl-0">
+                  <NavLink
+                    to={item.to}
+                    state={item.state}
+                    className="tracking-[2.7px] w-full block md:pr-0 md:py-10 pr-[95px]"
+                  >
+                    <span className="pr-[11px] md:hidden">
+                      {index.toString().padStart(2, "0")}
+                    </span>
+                    {item.state.toUpperCase()}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </motion.div>
         </nav>

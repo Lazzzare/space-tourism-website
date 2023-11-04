@@ -9,8 +9,8 @@ import navItems from "./navItems";
 const Header = ({ width }: { width: boolean }) => {
   const [mobile, setMobile] = useState(false);
 
-  const handleHide = (e: any) => {
-    if (e.target.tagName === "A") {
+  const handleHide = (e: React.MouseEvent<HTMLUListElement>) => {
+    if (e.target instanceof HTMLAnchorElement && e.target.tagName === "A") {
       setMobile(false);
     }
   };

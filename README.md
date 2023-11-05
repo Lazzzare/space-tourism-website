@@ -1,6 +1,6 @@
 # Space Tourism Website
 
-Welcome to the Space Tourism Website, a collaborative project by beka and lazare
+Welcome to the Space Tourism Website, a collaborative project by beka and lazare!
 
 ## Overview
 
